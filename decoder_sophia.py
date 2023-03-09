@@ -1,9 +1,12 @@
-#SophiaJohn
-#Decoder
+# Sophia John
+# Decoder
 
-elif choic e= =2:  # decoder
-# insert decoder
-pw_enc = str(input('Please enter your password to decode: '))
-decoded_pw = decode(pw_enc)
-print(decoded_pw)
-print('Your password has been decoded and is:', decoded_pw)
+
+def decode(pw_enc):
+    decode_dictionary = {'3':'0', '4':'1', '5':'2', '6':'3', '7':'4', '8':'5', '9':'6', '0':'7', '1':'8', '2':'9' }
+    decodedlist=[]
+    tempnum=[]
+    for i in range(0,8):
+        tempnum=pw_enc[i]
+        decodedlist.append(decode_dictionary[tempnum])
+    return ''.join(decodedlist)
